@@ -1,2 +1,3 @@
 <app-pregunta [texto]="preguntaActiva.texto"></app-pregunta>
-<app-respuestas [respuestas]="preguntaActiva.respuestas"></app-respuestas>
+<app-respuestas [respuestas]="preguntaActiva.respuestas" (respuestaSeleccionada)="onRespuestaSeleccionada()">
+</app-respuestas>

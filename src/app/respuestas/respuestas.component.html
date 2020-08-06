@@ -1,5 +1,5 @@
 <div class="respuestas">
-    <div class="respuesta" *ngFor="let respuesta of respuestas">
+    <div class="respuesta" *ngFor="let respuesta of respuestas; let indice=index;" (click)="onClick(indice)">
         {{respuesta}}
 
     </div>

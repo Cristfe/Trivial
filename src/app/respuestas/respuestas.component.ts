@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-respuestas',
@@ -9,9 +9,18 @@ export class RespuestasComponent implements OnInit {
 
   @Input() respuestas: string[];
 
-  constructor() { }
+  @Output() respuestaSeleccionada: EventEmitter<number>;
+
+  constructor() {
+    this.respuestaSeleccionada = new EventEmitter();
+  }
 
   ngOnInit(): void {
+  }
+
+  onClick(pIndice) {
+    console.log(pIndice);
+    this.respuestaSeleccionada.emit(pIndice);
   }
 
 }
