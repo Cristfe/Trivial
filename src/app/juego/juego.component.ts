@@ -14,7 +14,8 @@ export class JuegoComponent implements OnInit {
   constructor(private preguntasService: PreguntasService) { }
 
   ngOnInit(): void {
-    this.preguntasService.getPreguntaActiva();
+    this.preguntaActiva = this.preguntasService.getPreguntaActiva();
+    console.log(this.preguntaActiva);
   }
 
 }
